@@ -9,7 +9,7 @@
 
 Everything that needs to be done before coding starts.
 
-* **ERD** - Create an ERD to show the relationships between all of  your data
+* **ERD** - Create an ERD to show the relationships between all of  your data "https://dbdiagram.io/d/Hip-Hop,-Pizza,-and-Wangs-6505c03302bd1c4a5eb1ed5e"
 * **Postman Collection** - Create a postman collection to store and test out all of your API calls.
 * **[Wireframes](https://www.figma.com/file/4y3EZddALuBR3ouSEM57Np/MVP?node-id=0%3A1)** - This is the basic MVP wireframe. You can choose to style how you wish.
 * **Flowchart** - Plan out the flow of your data through the application
