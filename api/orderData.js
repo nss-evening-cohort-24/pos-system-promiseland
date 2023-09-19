@@ -65,10 +65,22 @@ const updateOrder = (payload) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
+const getOrderType = () => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/Order.json?orderBy="orderType"&equalTo=true`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+  }).then((response) => response.json())
+    .then((data) => resolve(Object.values(data)))
+    .catch(reject);
+});
+
 export {
   getOrder,
   deleteOrder,
   getSingleOrder,
   createOrder,
-  updateOrder
+  updateOrder,
+  getOrderType
 };
