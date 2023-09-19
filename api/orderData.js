@@ -53,9 +53,22 @@ const createOrder = (payload) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
+const updateOrder = (payload) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/Order/${payload.firebaseKey}.json`, {
+    method: 'PATCH',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(payload)
+  }).then((response) => response.json())
+    .then((data) => resolve(data))
+    .catch(reject);
+});
+
 export {
   getOrder,
   deleteOrder,
   getSingleOrder,
-  createOrder
+  createOrder,
+  updateOrder
 };
