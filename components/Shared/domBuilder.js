@@ -1,7 +1,7 @@
-import renderToDom from "../utils/renderToDom";
+import renderToDom from '../../utils/renderToDom';
 
 const domBuilder = () => {
-    const domstring = `
+  const domstring = `
     <div id="navigation"></div>
     <div id="main-container">
         <div id="buttons"></div>
@@ -14,8 +14,7 @@ const domBuilder = () => {
         <div id="payment-button"></div>
     </div>`;
 
-
-renderToDom('#app', domstring);
+  renderToDom('#app', domstring);
 };
 
 export default domBuilder;
