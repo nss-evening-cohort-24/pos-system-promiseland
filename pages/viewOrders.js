@@ -16,8 +16,11 @@ const viewOrder = (obj) => {
        <i id="delete-order-btn--${obj.firebaseKey}" class="btn btn-danger fas fa-trash-alt"></i>
      </div>
      <div class="text-white ms-5 details">
-     <h5>${obj.title} by ${obj.entryObject.title} ${obj.entryObject.category}</h5>
-     <p>${obj.description || ''}</p>
+     <h5>${obj.customerName} by ${obj.orderObject.customerName}</h5>
+     <p>${obj.entryObject.category.status}</p>
+     <p>${obj.phoneNumber || ''}</p>
+     <p>${obj.email || ''}</p>
+     <p>${obj.orderType || ''}</p>
      <hr>
   </div>
 </div>`;
