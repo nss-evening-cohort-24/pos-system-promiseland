@@ -5,12 +5,12 @@ import formEvents from '../components/Events/formEvents';
 import navBar from '../components/Shared/navigationBar';
 import navigationEvents from '../components/Events/navigationEvents';
 
-const startApp = () => {
-  domBuilder();
-  domEvents();
-  formEvents();
+const startApp = (user) => {
+  domBuilder(user);
+  domEvents(user);
+  formEvents(user);
   logoutButton();
   navBar();
-  navigationEvents();
+  navigationEvents(user);
 };
 export default startApp;
