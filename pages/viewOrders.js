@@ -1,11 +1,10 @@
-import clearDom from "../utils/clearDom"
-import renderToDom from "../utils/renderToDom";
-
+import clearDom from '../utils/clearDom';
+import renderToDom from '../utils/renderToDom';
 
 const viewOrder = (obj) => {
-    clearDom();
+  clearDom();
 
-    const domString = `
+  const domString = `
     <div class="card" style="width: 18rem;">
   <div class="card-body">
     <h5 class="card-title">Card title</h5>
@@ -22,7 +21,7 @@ const viewOrder = (obj) => {
   </div>
 </div>`;
 
-renderToDom('#view', domString);
+  renderToDom('#view', domString);
 };
 
 export default viewOrder;

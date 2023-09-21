@@ -1,9 +1,10 @@
 import firebase from 'firebase/app';
 import 'firebase/auth';
 import loginButton from '../components/Buttons/loginButton';
+import logoutButton from '../components/Buttons/logoutButton';
 import client from './client';
 import startApp from './startApp';
-
+// import logo from '../components/images/logo.png';
 
 const ViewDirectorBasedOnUserAuthStatus = () => {
   firebase.initializeApp(client);
@@ -14,6 +15,7 @@ const ViewDirectorBasedOnUserAuthStatus = () => {
       startApp(user);
     } else {
       // person is NOT logged in
+      // logo();
       loginButton();
     }
   });
