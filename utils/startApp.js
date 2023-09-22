@@ -9,14 +9,14 @@ import { getOrder } from '../api/orderData';
 
 const startApp = (user) => {
   domBuilder();
+  navBar();
   domEvents(user);
   formEvents(user);
-  logoutButton();
-  navBar();
   navigationEvents(user);
+  logoutButton();
 
   getOrder(user.uid).then((array) => {
-    if (array.lenght) {
+    if (array.length) {
       showOrder(array);
     } else {
       emptyOrder();

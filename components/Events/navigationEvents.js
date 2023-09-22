@@ -1,6 +1,8 @@
 import { signOut } from '../../utils/auth';
 import { getOrder } from '../../api/orderData';
 import { showOrder, emptyOrder } from '../../pages/order';
+import { getItems } from '../../api/itemData';
+import { emptyItems, showItems } from '../../pages/item';
 
 const navigationEvents = (user) => {
   document.querySelector('#logout-button').addEventListener('click', signOut);
@@ -14,6 +16,16 @@ const navigationEvents = (user) => {
         showOrder(array);
       } else {
         emptyOrder();
+      }
+    });
+  });
+
+  document.querySelector('#item').addEventListener('click', () => {
+    getItems(user.uid).then((array) => {
+      if (array.length) {
+        showItems(array);
+      } else {
+        emptyItems();
       }
     });
   });

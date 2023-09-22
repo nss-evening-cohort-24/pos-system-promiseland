@@ -1,5 +1,5 @@
 const clearDom = () => {
-  document.querySelector('#order-list').innerHTML = '';
+  document.querySelector('#orders').innerHTML = '';
   document.querySelector('#item-list').innerHTML = '';
   document.querySelector('#revenue-list').innerHTML = '';
   document.querySelector('#buttons').innerHTML = '';

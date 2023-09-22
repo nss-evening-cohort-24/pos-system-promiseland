@@ -2,7 +2,7 @@ import clearDom from '../utils/clearDom';
 import renderToDom from '../utils/renderToDom';
 
 const emptyItems = () => {
-  const domString = '<h1>No Items</h1>';
+  const domString = '<h1>No Items Found</h1>';
   renderToDom('#orders', domString);
 };
 
@@ -20,7 +20,8 @@ const showItems = (array) => {
   <div class="card-body">
   <h5 class="card-name">${item.itemName}</h5>
   <h5 class="card-text">${item.itemPrice}</h5>
-  <i class="btn btn-success fas fa-eye" id="add-edit-item-btn--${item.firebaseKey}"></i>
+  <i class="btn btn-success fas fa-eye" id="edit-item-btn--${item.firebaseKey}"></i>
+  <i class="btn btn-success fas fa-eye" id="delete-item-btn--${item.firebaseKey}"></i>
   </div>
   </div>
   `;

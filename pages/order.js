@@ -3,7 +3,7 @@ import renderToDom from '../utils/renderToDom';
 
 const emptyOrder = () => {
   const domString = '<h1>No Orders</h1>';
-  renderToDom('#order', domString);
+  renderToDom('#orders', domString);
 };
 
 const showOrder = (array) => {
@@ -11,10 +11,13 @@ const showOrder = (array) => {
 
   const btnString = '<button class="btn btn-success btn-lg md-4" id="add-order_btn">Add an Order</button>';
   renderToDom('#add-order', btnString);
-
   let domString = '';
-  array.forEach((item) => {
-    domString += `
+
+  if (!array.length) {
+    domString += '<p>No Orders Found</p>';
+  } else {
+    array.forEach((item) => {
+      domString += `
     <div class="card">
     <div class="card-body" style="height" 250px;">
     <h5 class="card-orderStatus">${item.orderStatus || ''}</h5>
@@ -26,7 +29,8 @@ const showOrder = (array) => {
     <i id="delete-order-btn--${item.firebaseKey}" class="btn btn-danger btn-info">Delete</i>
     </div>
     </div>`;
-  });
+    });
+  }
   renderToDom('#orders', domString);
 };
 
