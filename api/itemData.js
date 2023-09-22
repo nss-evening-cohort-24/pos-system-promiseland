@@ -3,7 +3,7 @@ import client from '../utils/client';
 const endpoint = client.databaseURL;
 
 const getItems = (uid) => Promise((resolve, reject) => {
-  fetch(`${endpoint}/Items.json?orderBy="uid"&equalTo="${uid}"`, {
+  fetch(`${endpoint}/items.json?orderBy="uid"&equalTo="${uid}"`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json'
@@ -20,7 +20,7 @@ const getItems = (uid) => Promise((resolve, reject) => {
 });
 
 const createItems = (payload) => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/Items.json`, {
+  fetch(`${endpoint}/items.json`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
@@ -32,7 +32,7 @@ const createItems = (payload) => new Promise((resolve, reject) => {
 });
 
 const getSingleItem = (firebaseKey) => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/Items/${firebaseKey}.json`, {
+  fetch(`${endpoint}/items/${firebaseKey}.json`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
@@ -42,8 +42,8 @@ const getSingleItem = (firebaseKey) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
-const deleteItem = (firebaseKey) => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/Items/${firebaseKey}.json`, {
+const deleteSingleItem = (firebaseKey) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/items/${firebaseKey}.json`, {
     method: 'DELETE',
     headers: {
       'Content-Type': 'application/json'
@@ -54,7 +54,7 @@ const deleteItem = (firebaseKey) => new Promise((resolve, reject) => {
 });
 
 const updateItem = (payload) => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/Items/${payload.firebaseKey}.json`, {
+  fetch(`${endpoint}/items/${payload.firebaseKey}.json`, {
     method: 'PATCH',
     headers: {
       'Content-Type': 'application/json'
@@ -66,7 +66,7 @@ const updateItem = (payload) => new Promise((resolve, reject) => {
 });
 
 const getOrderItems = (firebaseKey) => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/Orders.json?orderBy="id"&equalTo="${firebaseKey}`, {
+  fetch(`${endpoint}/orders.json?orderBy="id"&equalTo="${firebaseKey}`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json'
@@ -80,7 +80,7 @@ export {
   getItems,
   createItems,
   getSingleItem,
-  deleteItem,
+  deleteSingleItem,
   updateItem,
   getOrderItems
 };
