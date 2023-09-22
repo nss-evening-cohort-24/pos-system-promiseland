@@ -1,9 +1,9 @@
 import firebase from 'firebase/app';
 import 'firebase/auth';
+import logoutButton from '../components/Buttons/logoutButton';
 import loginButton from '../components/Buttons/loginButton';
 import client from './client';
 import startApp from './startApp';
-
 
 const ViewDirectorBasedOnUserAuthStatus = () => {
   firebase.initializeApp(client);
