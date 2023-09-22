@@ -6,11 +6,11 @@ import { emptyItems, showItems } from '../../pages/item';
 
 const navigationEvents = (user) => {
   document.querySelector('#logout-button').addEventListener('click', signOut);
-  document.querySelector('#show-order').addEventListener('click', () => {
+  document.querySelector('#view-orders').addEventListener('click', () => {
     getOrder(user.uid).then(getOrder);
   });
 
-  document.querySelector('#all-orders').addEventListener('click', () => {
+  document.querySelector('#view-orders').addEventListener('click', () => {
     getOrder(user.uid).then((array) => {
       if (array.length) {
         showOrder(array);
