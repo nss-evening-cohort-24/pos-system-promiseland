@@ -1,7 +1,7 @@
 import renderToDom from '../../utils/renderToDom';
 import clearDom from '../../utils/clearDom';
 
-const createEditOrder = (obj = {}) => {
+const createEditOrderF = (obj = {}) => {
   clearDom();
   const domstring = `
     <form id="${
@@ -42,4 +42,4 @@ const createEditOrder = (obj = {}) => {
   renderToDom('#form-container', domstring);
 };
 
-export default createEditOrder;
+export default createEditOrderF;
