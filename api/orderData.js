@@ -3,7 +3,7 @@ import client from '../utils/client';
 const endpoint = client.databaseURL;
 
 const getOrder = (uid) => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/Order.json?orderBy="id"&equlTo=${uid}"`, {
+  fetch(`${endpoint}/orders.json?orderBy="uid"&equlTo=${uid}"`, {
     method: 'GET',
     headers: {
       'Conten-Type': 'application/json'
@@ -20,7 +20,7 @@ const getOrder = (uid) => new Promise((resolve, reject) => {
 });
 
 const deleteOrder = (firebaseKey) => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/Order/${firebaseKey}.json`, {
+  fetch(`${endpoint}/orders/${firebaseKey}.json`, {
     method: 'DELETE',
     headers: {
       'Content-Type': 'applicaiton/json'
@@ -31,7 +31,7 @@ const deleteOrder = (firebaseKey) => new Promise((resolve, reject) => {
 });
 
 const getSingleOrder = (firebaseKey) => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/Order/${firebaseKey}.json`, {
+  fetch(`${endpoint}/orders/${firebaseKey}.json`, {
     method: 'GET',
     header: {
       'Content-Type': 'application/json',
@@ -42,7 +42,7 @@ const getSingleOrder = (firebaseKey) => new Promise((resolve, reject) => {
 });
 
 const createOrder = (payload) => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/Order.json`, {
+  fetch(`${endpoint}/orders.json`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
@@ -54,7 +54,7 @@ const createOrder = (payload) => new Promise((resolve, reject) => {
 });
 
 const updateOrder = (payload) => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/Order/${payload.firebaseKey}.json`, {
+  fetch(`${endpoint}/orders/${payload.firebaseKey}.json`, {
     method: 'PATCH',
     headers: {
       'Content-Type': 'application/json'
@@ -66,7 +66,7 @@ const updateOrder = (payload) => new Promise((resolve, reject) => {
 });
 
 const getOrderType = () => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/Order.json?orderBy="orderType"&equalTo=true`, {
+  fetch(`${endpoint}/orders.json?orderBy="orderType"&equalTo=true`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json'

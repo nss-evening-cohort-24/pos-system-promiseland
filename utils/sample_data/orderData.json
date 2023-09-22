@@ -1,7 +1,7 @@
 {
   "-NeesGzZMAc8rMoe9KNx": {
-    "id": 1,
-    "uid": "-NeesGzZMAc8rMoe9KNx",
+    "uid": 1,
+    "firebaseKey": "-NeesGzZMAc8rMoe9KNx",
     "isPhone": true,
     "orderType": "phone",
     "customerName": "Abbie Haylands",
@@ -9,8 +9,8 @@
     "phoneNumber": "532-333-3979"
   },
   "-NeesGz_CyouOCjZQW71": {
-    "id": 2,
-    "uid": "-NeesGz_CyouOCjZQW71",
+    "uid": 2,
+    "firebaseKey": "-NeesGz_CyouOCjZQW71",
     "isPhone": true,
     "orderType": "inPerson",
     "customerName": "Winifred Crowthe",
@@ -18,8 +18,8 @@
     "phoneNumber": "775-690-0289"
   },
   "-NeesGzaKMwaiDQADZwF": {
-    "id": 3,
-    "uid": "-NeesGzaKMwaiDQADZwF",
+    "uid": 3,
+    "firebaseKey": "-NeesGzaKMwaiDQADZwF",
     "isPhone": false,
     "orderType": "inPerson",
     "customerName": "Tara Lording",
@@ -27,8 +27,8 @@
     "phoneNumber": "798-604-7800"
   },
   "-NeesGzaKMwaiDQADZwG": {
-    "id": 4,
-    "uid": "-NeesGzaKMwaiDQADZwG",
+    "uid": 4,
+    "firebaseKey": "-NeesGzaKMwaiDQADZwG",
     "isPhone": true,
     "orderType": "inPerson",
     "customerName": "Adela O'Hengerty",
@@ -36,8 +36,8 @@
     "phoneNumber": "501-437-6839"
   },
   "-NeesGzbAmTybJUFyP8k": {
-    "id": 5,
-    "uid": "-NeesGzbAmTybJUFyP8k",
+    "uid": 5,
+    "firebaseKey": "-NeesGzbAmTybJUFyP8k",
     "isPhone": true,
     "orderType": "phone",
     "customerName": "Danny Grimshaw",
@@ -45,8 +45,8 @@
     "phoneNumber": "841-508-1528"
   },
   "-NeesGzcaRW18SXKFEA6": {
-    "id": 6,
-    "uid": "-NeesGzcaRW18SXKFEA6",
+    "uid": 6,
+    "firebaseKey": "-NeesGzcaRW18SXKFEA6",
     "isPhone": true,
     "orderType": "phone",
     "customerName": "Larry McGarry",
@@ -54,8 +54,8 @@
     "phoneNumber": "808-209-9976"
   },
   "-NeesGzcaRW18SXKFEA7": {
-    "id": 7,
-    "uid": "-NeesGzcaRW18SXKFEA7",
+    "uid": 7,
+    "firebaseKey": "-NeesGzcaRW18SXKFEA7",
     "isPhone": true,
     "orderType": "inPerson",
     "customerName": "Gabriel Laydel",
@@ -63,8 +63,8 @@
     "phoneNumber": "326-122-9317"
   },
   "-NeesGzd9w9MkTOguwWN": {
-    "id": 8,
-    "uid": "-NeesGzd9w9MkTOguwWN",
+    "uid": 8,
+    "firebaseKey": "-NeesGzd9w9MkTOguwWN",
     "isPhone": false,
     "orderType": "phone",
     "customerName": "Sheila-kathryn Hankey",
@@ -72,8 +72,8 @@
     "phoneNumber": "860-837-0069"
   },
   "-NeesGzd9w9MkTOguwWO": {
-    "id": 9,
-    "uid": "-NeesGzd9w9MkTOguwWO",
+    "uid": 9,
+    "firebaseKey": "-NeesGzd9w9MkTOguwWO",
     "isPhone": true,
     "orderType": "inPerson",
     "customerName": "Cicily Gass",
@@ -81,8 +81,8 @@
     "phoneNumber": "133-151-7108"
   },
   "-NeesGzejZqTZ8PNL6sq": {
-    "id": 10,
-    "uid": "-NeesGzejZqTZ8PNL6sq",
+    "uid": 10,
+    "firebaseKey": "-NeesGzejZqTZ8PNL6sq",
     "isPhone": true,
     "orderType": "phone",
     "customerName": "Doris Mangin",
