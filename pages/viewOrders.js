@@ -7,19 +7,18 @@ const viewOrder = (obj) => {
   const domString = `
     <div class="card" style="width: 18rem;">
   <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <h5 class="card-title">${obj.customerName}</h5>
+    <h4 class="order-status">${obj.orderStatus}</h4>
+    <h4 class="order-phoneNumber">${obj.phoneNumber}</h4>
+    <h4 class="order-email">${obj.email}</h4>
+    <h4 class="order-orderType">${obj.orderType}</h4>
+    
     <div class="mt-5">
+       <i id="detail-order-btn--${obj.firebaseKey}" class="fas fa-edit btn btn-info"></i>
        <i id="edit-order-btn--${obj.firebaseKey}" class="fas fa-edit btn btn-info"></i>
        <i id="delete-order-btn--${obj.firebaseKey}" class="btn btn-danger fas fa-trash-alt"></i>
      </div>
-     <div class="text-white ms-5 details">
-     <h5>${obj.title} by ${obj.entryObject.title} ${obj.entryObject.category}</h5>
-     <p>${obj.description || ''}</p>
-     <hr>
-  </div>
-</div>`;
+    </div>`;
 
   renderToDom('#view', domString);
 };

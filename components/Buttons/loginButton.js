@@ -1,6 +1,11 @@
 import { signIn } from '../../utils/auth';
 
-// const logo = '<image src="/components/images/205346767-a182560c-64a6-4cfa-80b3-0d64cf998242.png"></image>';
+document.querySelector('#app').innerHTML = `
+<div class="text-center">
+<img src="https://as1.ftcdn.net/v2/jpg/02/41/68/24/1000_F_241682449_NxVjPpkLc9vGY2dOTKENefJpgvdKxJJB.jpg" 
+class="rounded-circle" alt="chicken">
+</div>
+`;
 // GOOGLE LOGIN BUTTON
 const loginButton = () => {
   const domString = '<button id="google-auth" class="btn btn-danger">Login to Get Started</button>';

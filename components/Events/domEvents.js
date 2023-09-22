@@ -8,14 +8,14 @@ import { getOrderDetails } from '../../api/mergedData';
 const domEvents = (user) => {
   document.querySelector('#main-container').addEventListener('click', (e) => {
     /* eslint-disable */
-    if (e.target.id.icludes('delete-order-btn')) {
+    if (e.target.id.includes('delete-order-btn')) {
       if (window.confirm('Want to delete?')) {
         const [, firebaseKey] = e.target.id.split('--');
         deleteOrder(firebaseKey).then(getOrder).then(showOrder);
       }
     }
 
-    if (e.target.id.includes('add-order_btn')) {
+    if (e.target.id.includes('add-order-btn')) {
       createEditOrderForm(user.uid);
     }
 
@@ -24,7 +24,7 @@ const domEvents = (user) => {
       getSingleOrder(firebaseKey).then((orderObj) => createEditOrderForm(user.uid, orderObj));
     }
 
-    if (e.target.id.incluedes('view-order_btn')) {
+    if (e.target.id.includes('view-orders-btn')) {
       const [, firebaseKey] = e.target.id.split('--');
       getOrderDetails(firebaseKey).the(viewOrder);
     }

@@ -3,10 +3,10 @@ import client from '../utils/client';
 const endpoint = client.databaseURL;
 
 const getOrder = (uid) => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/orders.json?orderBy="uid"&equlTo=${uid}"`, {
+  fetch(`${endpoint}/orders.json?orderBy="uid"&equalTo="${uid}"`, {
     method: 'GET',
     headers: {
-      'Conten-Type': 'application/json'
+      'Content-Type': 'application/json'
     },
   }).then((response) => response.json())
     .then((data) => {
@@ -23,7 +23,7 @@ const deleteOrder = (firebaseKey) => new Promise((resolve, reject) => {
   fetch(`${endpoint}/orders/${firebaseKey}.json`, {
     method: 'DELETE',
     headers: {
-      'Content-Type': 'applicaiton/json'
+      'Content-Type': 'application/json'
     },
   }).then((response) => response.json())
     .then(resolve)
