@@ -1,6 +1,6 @@
 {
   "-NeesGzZMAc8rMoe9KNx": {
-    "uid": 1,
+    "uid": "dpdzLy8BEccHM3FA1YMEKttLVVM2",
     "firebaseKey": "-NeesGzZMAc8rMoe9KNx",
     "isPhone": true,
     "orderType": "phone",
@@ -9,7 +9,7 @@
     "phoneNumber": "532-333-3979"
   },
   "-NeesGz_CyouOCjZQW71": {
-    "uid": 2,
+    "uid": "dpdzLy8BEccHM3FA1YMEKttLVVM2",
     "firebaseKey": "-NeesGz_CyouOCjZQW71",
     "isPhone": true,
     "orderType": "inPerson",
@@ -18,7 +18,7 @@
     "phoneNumber": "775-690-0289"
   },
   "-NeesGzaKMwaiDQADZwF": {
-    "uid": 3,
+    "uid": "dpdzLy8BEccHM3FA1YMEKttLVVM2",
     "firebaseKey": "-NeesGzaKMwaiDQADZwF",
     "isPhone": false,
     "orderType": "inPerson",
@@ -27,7 +27,7 @@
     "phoneNumber": "798-604-7800"
   },
   "-NeesGzaKMwaiDQADZwG": {
-    "uid": 4,
+    "uid": "dpdzLy8BEccHM3FA1YMEKttLVVM2",
     "firebaseKey": "-NeesGzaKMwaiDQADZwG",
     "isPhone": true,
     "orderType": "inPerson",
@@ -36,7 +36,7 @@
     "phoneNumber": "501-437-6839"
   },
   "-NeesGzbAmTybJUFyP8k": {
-    "uid": 5,
+    "uid": "Yut6OQf6NvbYfa5WP4AVydBqzWb2",
     "firebaseKey": "-NeesGzbAmTybJUFyP8k",
     "isPhone": true,
     "orderType": "phone",
@@ -45,7 +45,7 @@
     "phoneNumber": "841-508-1528"
   },
   "-NeesGzcaRW18SXKFEA6": {
-    "uid": 6,
+    "uid": "Yut6OQf6NvbYfa5WP4AVydBqzWb2",
     "firebaseKey": "-NeesGzcaRW18SXKFEA6",
     "isPhone": true,
     "orderType": "phone",
@@ -54,7 +54,7 @@
     "phoneNumber": "808-209-9976"
   },
   "-NeesGzcaRW18SXKFEA7": {
-    "uid": 7,
+    "uid": "Yut6OQf6NvbYfa5WP4AVydBqzWb2",
     "firebaseKey": "-NeesGzcaRW18SXKFEA7",
     "isPhone": true,
     "orderType": "inPerson",
@@ -63,7 +63,7 @@
     "phoneNumber": "326-122-9317"
   },
   "-NeesGzd9w9MkTOguwWN": {
-    "uid": 8,
+    "uid": "ZmzqVGQ8FrOydDOAEq2j8fMjpil2",
     "firebaseKey": "-NeesGzd9w9MkTOguwWN",
     "isPhone": false,
     "orderType": "phone",
@@ -72,7 +72,7 @@
     "phoneNumber": "860-837-0069"
   },
   "-NeesGzd9w9MkTOguwWO": {
-    "uid": 9,
+    "uid": "ZmzqVGQ8FrOydDOAEq2j8fMjpil2",
     "firebaseKey": "-NeesGzd9w9MkTOguwWO",
     "isPhone": true,
     "orderType": "inPerson",
@@ -81,7 +81,7 @@
     "phoneNumber": "133-151-7108"
   },
   "-NeesGzejZqTZ8PNL6sq": {
-    "uid": 10,
+    "uid": "ZmzqVGQ8FrOydDOAEq2j8fMjpil2",
     "firebaseKey": "-NeesGzejZqTZ8PNL6sq",
     "isPhone": true,
     "orderType": "phone",
