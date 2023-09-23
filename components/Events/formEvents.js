@@ -1,9 +1,9 @@
-import { createOrder, updateOrder, getOrder } from '../../api/orderData';
-import { showOrder } from '../../pages/order';
+import { createOrder, getOrder, updateOrder } from '../../api/orderData';
 import { createItems, getItems, updateItem } from '../../api/itemData';
+import { showOrder } from '../../pages/order';
 import { showItems } from '../../pages/item';
 
-function formEvents(user) {
+const formEvents = (user) => {
   document.querySelector('#main-container').addEventListener('submit', (e) => {
     e.preventDefault();
     if (e.target.id.includes('submit-order')) {
@@ -11,14 +11,13 @@ function formEvents(user) {
         customerName: document.querySelector('#customerName').value,
         phoneNumber: document.querySelector('#phoneNumber').value,
         email: document.querySelector('#email').value,
-        price: document.querySelector('#price').value,
         orderType: document.querySelector('#orderType').value,
         uid: user.uid,
       };
 
-      createOrder(payload).then(({ customerName }) => {
-        const patchPayload = { firebaseKey: customerName };
-
+      createOrder(payload).then(({ name }) => {
+        const patchPayload = { firebaseKey: name };
+        
         updateOrder(patchPayload).then(() => {
           getOrder(user.uid).then(showOrder);
         });
@@ -31,10 +30,9 @@ function formEvents(user) {
         customerName: document.querySelector('#customerName').value,
         phoneNumber: document.querySelector('#phoneNumber').value,
         email: document.querySelector('#email').value,
-        price: document.querySelector('#price').value,
         orderType: document.querySelector('#orderType').value,
         uid: user.uid,
-        firebaseKey,
+        firebaseKey
       };
 
       updateOrder(payload).then(() => {
@@ -44,10 +42,9 @@ function formEvents(user) {
 
     if (e.target.id.includes('submit-item')) {
       const payload = {
-        first_name: document.querySelector('#first_name').value,
-        last_name: document.querySelector('#last_name').value,
-        email: document.querySelector('#email').value,
-        uid: user.uid
+        itemName: document.querySelector('#itemName').value,
+        itemPrice: document.querySelector('#itemPrice').value,
+        uid: user.uid,
       };
 
       createItems(payload).then(({ name }) => {
@@ -73,6 +70,6 @@ function formEvents(user) {
       });
     }
   });
-}
+};
 
 export default formEvents;

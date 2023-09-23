@@ -1,11 +1,11 @@
+import { getOrder } from '../api/orderData';
 import logoutButton from '../components/Buttons/logoutButton';
 import domBuilder from '../components/Shared/domBuilder';
+import navBar from '../components/Shared/navigationBar';
 import domEvents from '../components/Events/domEvents';
 import formEvents from '../components/Events/formEvents';
-import navBar from '../components/Shared/navigationBar';
 import navigationEvents from '../components/Events/navigationEvents';
 import { emptyOrder, showOrder } from '../pages/order';
-import { getOrder } from '../api/orderData';
 
 const startApp = (user) => {
   domBuilder();

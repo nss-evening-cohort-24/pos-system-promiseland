@@ -9,10 +9,10 @@ const emptyOrder = () => {
 const showOrder = (array) => {
   clearDom();
 
-  const btnString = '<button class="btn btn-success btn-lg md-4" id="add-order_btn">Add an Order</button>';
-  renderToDom('#add-order', btnString);
-  let domString = '';
+  const btnString = '<button class="btn btn-success btn-lg md-4" id="add-order-btn">Add an Order</button>';
+  renderToDom('#add-button', btnString);
 
+  let domString = '';
   if (!array.length) {
     domString += '<p>No Orders Found</p>';
   } else {
@@ -20,7 +20,7 @@ const showOrder = (array) => {
       domString += `
     <div class="card">
     <div class="card-body" style="height" 250px;">
-    <h5 class="card-orderStatus">${item.orderStatus || ''}</h5>
+    <h5 class="card-orderStatus">${item.orderStatus ? 'open' || 'closed'}</h5>
     <p class="card-phoneNumber">${item.phoneNumber || ''}</p>
     <p class="card-email">${item.email || ''}</p>
     <p class="card-orderType">${item.isphone || ''}</p>

@@ -1,4 +1,4 @@
-import renderToDOM from '../../utils/renderToDom';
+import renderToDom from '../../utils/renderToDom';
 
 const navBar = () => {
   const domString = `
@@ -11,24 +11,21 @@ const navBar = () => {
         <div class="collapse navbar-collapse" id="navbarText">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item active">
-              <a class="nav-link" href="#" id="view-orders">
-                View Orders <span class="sr-only">(current)</span>
-              </a>
+             <a class="nav-link" href="#" id="view-orders">View Orders <span class="sr-only">(current)</span>
+             </a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="#" id="create-an-order">
-                Create an Order <span class="sr-only">(current)</span>
+              <a class="nav-link" href="#" id="create-orders"> Create an Order <span class="sr-only">(current)</span>
               </a>
             </li>
-          </ul>
-          <span class="navbar-text">
-            <div id="logout-button"></div>
+            </ul>
+           <div id="logout-button"></div>
           </span>
         </div>
         </div>
       </nav>`;
 
-  renderToDOM('#navigation', domString);
+  renderToDom('#navigation', domString);
 };
 
 export default navBar;

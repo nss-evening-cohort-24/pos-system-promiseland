@@ -24,7 +24,7 @@ const domEvents = (user) => {
       getSingleOrder(firebaseKey).then((orderObj) => createEditOrderForm(user.uid, orderObj));
     }
 
-    if (e.target.id.includes('view-order-btn')) {
+    if (e.target.id.includes('view-orders-btn')) {
       const [, firebaseKey] = e.target.id.split('--');
       getOrderDetails(firebaseKey).the(viewOrder);
     }
