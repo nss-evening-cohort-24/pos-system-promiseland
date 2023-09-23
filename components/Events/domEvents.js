@@ -1,5 +1,5 @@
 import { deleteOrder, getOrder, getSingleOrder } from '../../api/orderData';
-import createEditOrderForm from '../Forms/createEditOrder';
+import createEditOrder from '../Forms/createEditOrder';
 import { showOrder } from '../../pages/order';
 import viewOrder from '../../pages/viewOrders';
 import { getOrderDetails } from '../../api/mergedData';
@@ -16,12 +16,12 @@ const domEvents = (user) => {
     }
 
     if (e.target.id.includes('add-order-btn')) {
-      createEditOrderForm(user.uid);
+      createEditOrder(user.uid);
     }
 
     if (e.target.id.includes('edit-order-btn')) {
       const [, firebaseKey] = e.target.id.split('--');
-      getSingleOrder(firebaseKey).then((orderObj) => createEditOrderForm(user.uid, orderObj));
+      getSingleOrder(firebaseKey).then((orderObj) => createEditOrder(user.uid, orderObj));
     }
 
     if (e.target.id.includes('view-orders-btn')) {

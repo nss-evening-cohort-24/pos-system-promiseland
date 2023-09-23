@@ -9,21 +9,13 @@ import homeScreen from '../pages/homeScreen';
 // import { emptyOrder, showOrder } from '../pages/order';
 
 const startApp = (user) => {
-  domBuilder();
-  navBar();
-  homeScreen();
+  domBuilder(user);
+  navBar(user);
+  homeScreen(user);
   domEvents(user);
   formEvents(user);
   navigationEvents(user);
   logoutButton();
-
-  // getOrder(user.uid).then((array) => {
-  //   if (array.length) {
-  //     showOrder(array);
-  //   } else {
-  //     emptyOrder();
-  //   }
-  // });
 };
 
 export default startApp;
