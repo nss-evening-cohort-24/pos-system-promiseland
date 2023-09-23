@@ -3,22 +3,20 @@ import clearDom from '../../utils/clearDom';
 
 const createEditOrder = (obj = {}) => {
   clearDom();
-  const domstring = `
-    <form id="${obj.firebaseKey ? `update-order--${obj.firebaseKey}` : 'submit-order'
+  const domString = `
+    <form id="${obj.firebaseKey ? `create-orders--${obj.firebaseKey}` : 'submit-order'
 }" class="mb-4">
         <div class="form-group">
           <label for="orderName">Order Name</label>
-          <input type="text" class="form-control" id="orderName" aria-describedby="orderName" placeholder="Enter Order Name" value="${
-  obj.customerName || ''}" required>
+          <input type="text" class="form-control" id="orderName" aria-describedby="orderName" placeholder="Enter Order Name" value="${obj.customerName || ''}" required>
         </div>
         <div class="form-group">
           <label for="customerPhone">Customer Phone</label>
-          <input type="telephone" class="form-control" placeholder="Customer Phone" id="phone" style="height: 100px">${obj.phoneNumber || ''}</input>
+          <input type="tel" class="form-control" placeholder="Customer Phone" id="phone" style="height: 100px">${obj.phoneNumber || ''}</input>
         </div>
         <div class="form-group">
           <label for="customerEmail">Customer Email</label>
-          <textarea class="form-control" placeholder="Customer Email" id="email" style="height: 100px">${obj.email || ''
-}</textarea>
+          <input type="email"  class="form-control" placeholder="Customer Email" id="email" style="height: 100px">${obj.email || ''}</input>
         </div>
         <div class="form-group">
         <label for="type">Order Type</label>
@@ -28,11 +26,11 @@ const createEditOrder = (obj = {}) => {
     <option value="inPerson">In Person</option>
     </select>
         </div>
-        <button type="submit" class="btn btn-primary">Create/Edit an Order</button>
+        <button type="submit" id="create-order" class="btn btn-primary">Create/Edit an Order</button>
       </form>
     `;
 
-  renderToDom('#form-container', domstring);
+  renderToDom('#form-container', domString);
 };
 
 export default createEditOrder;
