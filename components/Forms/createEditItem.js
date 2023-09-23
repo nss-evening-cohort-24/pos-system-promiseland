@@ -15,7 +15,7 @@ const createEditItem = (obj = {}) => {
       <input type="text" class="form-control" id="itemPrice" aria-describedby="customerPhone" placeholder="Price $" value="${obj.itemPrice || ''}"  required>
     </div>
     <br>
-    <button type="submit" class="btn btn-success" id="submit">Create/Edit Order</button>
+    <button type="submit" class="btn btn-success">Create/Edit Order</button>
   </form>`;
   console.warn(domString);
   renderToDom('#form-container', domString);

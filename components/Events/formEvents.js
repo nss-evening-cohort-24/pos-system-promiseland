@@ -32,7 +32,7 @@ const formEvents = (user) => {
         email: document.querySelector('#email').value,
         orderType: document.querySelector('#orderType').value,
         uid: user.uid,
-        firebaseKey
+        firebaseKey,
       };
 
       updateOrder(payload).then(() => {

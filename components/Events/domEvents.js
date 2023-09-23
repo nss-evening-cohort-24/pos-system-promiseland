@@ -15,7 +15,7 @@ const domEvents = (user) => {
       }
     }
 
-    if (e.target.id.includes('create-orders-btn')) {
+    if (e.target.id.includes('create-orders')) {
       createEditOrder(user.uid);
     }
 

@@ -1,22 +1,21 @@
 import renderToDom from '../../utils/renderToDom';
 import clearDom from '../../utils/clearDom';
 
-const createEditOrder = (obj = {}) => {
+const createEditOrder = (uid, obj = {}) => {
   clearDom();
   const domString = `
-    <form id="${obj.firebaseKey ? `create-orders--${obj.firebaseKey}` : 'submit-order'
-}" class="mb-4">
+    <form id="${obj.firebaseKey ? `update-order--${obj.firebaseKey}` : 'submit-order'}" class="mb-4">
         <div class="form-group">
           <label for="orderName">Order Name</label>
-          <input type="text" class="form-control" id="orderName" aria-describedby="orderName" placeholder="Enter Order Name" value="${obj.customerName || ''}" required>
+          <input type="text" class="form-control" id="customerName" aria-describedby="orderName" placeholder="Enter Order Name" value="${obj.customerName || ''}" required>
         </div>
         <div class="form-group">
           <label for="customerPhone">Customer Phone</label>
-          <input type="tel" class="form-control" placeholder="Customer Phone" id="phone" style="height: 100px">${obj.phoneNumber || ''}</input>
+          <textarea input type="tel" class="form-control" placeholder="Customer Phone" id="phoneNumber" style="height: 100px">${obj.phoneNumber || ''}</textarea>
         </div>
         <div class="form-group">
           <label for="customerEmail">Customer Email</label>
-          <input type="email"  class="form-control" placeholder="Customer Email" id="email" style="height: 100px">${obj.email || ''}</input>
+          <textarea input type="email"  class="form-control" placeholder="Customer Email" id="email" style="height: 100px">${obj.email || ''}</textarea>
         </div>
         <div class="form-group">
         <label for="type">Order Type</label>
@@ -26,7 +25,7 @@ const createEditOrder = (obj = {}) => {
     <option value="inPerson">In Person</option>
     </select>
         </div>
-        <button type="submit" id="create-order" class="btn btn-primary">Create/Edit an Order</button>
+        <button type="submit" class="btn btn-primary">Create/Edit an Order</button>
       </form>
     `;
 
