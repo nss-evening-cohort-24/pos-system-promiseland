@@ -26,8 +26,15 @@ const domEvents = (user) => {
 
     if (e.target.id.includes('view-orders-btn')) {
       const [, firebaseKey] = e.target.id.split('--');
-      getOrderDetails(firebaseKey).the(viewOrder);
+      getOrderDetails(firebaseKey).then(viewOrder);
     }
+    getOrder(user.uid).then((array) => {
+        if (array.length) {
+          showOrder(array);
+        } else {
+          emptyOrder();
+        }
+      });
   });
 };
 

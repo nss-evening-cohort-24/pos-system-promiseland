@@ -6,6 +6,7 @@ import { showItems } from '../../pages/item';
 const formEvents = (user) => {
   document.querySelector('#main-container').addEventListener('submit', (e) => {
     e.preventDefault();
+
     if (e.target.id.includes('submit-order')) {
       const payload = {
         customerName: document.querySelector('#customerName').value,
@@ -17,7 +18,6 @@ const formEvents = (user) => {
 
       createOrder(payload).then(({ name }) => {
         const patchPayload = { firebaseKey: name };
-        
         updateOrder(patchPayload).then(() => {
           getOrder(user.uid).then(showOrder);
         });

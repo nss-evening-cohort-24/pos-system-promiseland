@@ -20,7 +20,7 @@ const showOrder = (array) => {
       domString += `
     <div class="card">
     <div class="card-body" style="height" 250px;">
-    <h5 class="card-orderStatus">${item.orderStatus ? 'open' || 'closed'}</h5>
+    <h5 class="card-orderStatus">${item.orderStatus ? 'open' : 'closed'}</h5>
     <p class="card-phoneNumber">${item.phoneNumber || ''}</p>
     <p class="card-email">${item.email || ''}</p>
     <p class="card-orderType">${item.isphone || ''}</p>
