@@ -1,7 +1,7 @@
 import clearDom from '../utils/clearDom';
 import renderToDom from '../utils/renderToDom';
 
-const viewOrder = (obj) => {
+const viewOrders = (obj) => {
   clearDom();
 
   const domString = `
@@ -23,4 +23,4 @@ const viewOrder = (obj) => {
   renderToDom('#view', domString);
 };
 
-export default viewOrder;
+export default viewOrders;
