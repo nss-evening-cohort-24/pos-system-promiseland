@@ -31,7 +31,6 @@ const createEditOrderF = (obj = {}) => {
     <option value="">Select an Order Type</option>"${obj.orderType || ''}" required>
     <option value="phone">Phone</option>
     <option value="inPerson">In Person</option>
-
     </select>
         </div>
         <button type="createEdit" class="btn btn-primary">Create/Edit an Order

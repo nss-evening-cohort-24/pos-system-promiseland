@@ -17,14 +17,14 @@ const formEvents = (user) => {
 
       createOrder(payload).then(({ name }) => {
         const patchPayload = { firebaseKey: name };
-
+        
         updateOrder(patchPayload).then(() => {
           getOrder(user.uid).then(showOrder);
         });
       });
     }
 
-    if (e.taget.id.includes('update-order')) {
+    if (e.target.id.includes('update-order')) {
       const [, firebaseKey] = e.target.id.split('--');
       const payload = {
         customerName: document.querySelector('#customerName').value,
@@ -40,7 +40,7 @@ const formEvents = (user) => {
       });
     }
 
-    if (e.taget.id.includes('submit-item')) {
+    if (e.target.id.includes('submit-item')) {
       const payload = {
         itemName: document.querySelector('#itemName').value,
         itemPrice: document.querySelector('#itemPrice').value,
@@ -56,11 +56,11 @@ const formEvents = (user) => {
       });
     }
 
-    if (e.taget.id.includes('update-item')) {
-      const [, firebaseKey] = e.taget.id.split('--');
+    if (e.target.id.includes('update-item')) {
+      const [, firebaseKey] = e.target.id.split('--');
       const payload = {
         itemName: document.querySelector('#itemName').value,
-        itemPrice: document.querySelector('#itemPrice').value,
+        lastPrice: document.querySelector('#itemPrice').value,
         uid: user.uid,
         firebaseKey,
       };

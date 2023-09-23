@@ -1,6 +1,7 @@
 import firebase from 'firebase/app';
 import 'firebase/auth';
 import loginButton from '../components/Buttons/loginButton';
+import client from './client';
 import startApp from './startApp';
 import client from './client';
 import logoutButton from '../components/Buttons/logoutButton';
