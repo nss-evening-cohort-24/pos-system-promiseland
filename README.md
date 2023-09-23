@@ -1,3 +1,4 @@
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/liKnqtLP)
 <div style="text-align:center">
 <h1>Hip Hop, Pizza, and Wangs (HHP+W)</h1>
 
@@ -8,7 +9,7 @@
 
 Everything that needs to be done before coding starts.
 
-* **ERD** - Create an ERD to show the relationships between all of  your data
+* **ERD** - Create an ERD to show the relationships between all of  your data "https://dbdiagram.io/d/Hip-Hop,-Pizza,-and-Wangs-6505c03302bd1c4a5eb1ed5e"
 * **Postman Collection** - Create a postman collection to store and test out all of your API calls.
 * **[Wireframes](https://www.figma.com/file/4y3EZddALuBR3ouSEM57Np/MVP?node-id=0%3A1)** - This is the basic MVP wireframe. You can choose to style how you wish.
 * **Flowchart** - Plan out the flow of your data through the application
