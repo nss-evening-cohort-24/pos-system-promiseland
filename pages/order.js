@@ -22,7 +22,7 @@ const showOrder = (array) => {
     <p class="card-orderStatus">${item.orderStatus ? 'open' : 'closed'}</p>
     <p class="card-phoneNumber">${item.phoneNumber || ''}</p>
     <p class="card-email">${item.email || ''}</p>
-    <p class="card-orderType">${item.isphone ? 'isphone' : 'walkin'}</p>
+    <p class="card-orderType">${item.isphone ? 'isphone' : 'in person'}</p>
     <i id="detail-order-btn--${item.firebaseKey}" class="fas fa-edit btn btn-info">Detail</i>
     <i id="edit-order-btn--${item.firebaseKey}" class="fas fa-edit btn btn-info">Edit</i>
     <i id="delete-order-btn--${item.firebaseKey}" class="btn btn-danger btn-info">Delete</i>

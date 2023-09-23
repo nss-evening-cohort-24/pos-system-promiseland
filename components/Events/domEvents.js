@@ -15,7 +15,7 @@ const domEvents = (user) => {
       }
     }
 
-    if (e.target.id.includes('add-order-btn')) {
+    if (e.target.id.includes('create-orders-btn')) {
       createEditOrder(user.uid);
     }
 
@@ -24,17 +24,20 @@ const domEvents = (user) => {
       getSingleOrder(firebaseKey).then((orderObj) => createEditOrder(user.uid, orderObj));
     }
 
-    if (e.target.id.includes('view-orders-btn')) {
+    if (e.target.id.includes('detail-order-btn')) {
       const [, firebaseKey] = e.target.id.split('--');
       getOrderDetails(firebaseKey).then(viewOrder);
     }
-    getOrder(user.uid).then((array) => {
+
+    if (e.target.id.includes('view-orders')) {      
+      getOrder(user.uid).then((array) => {
         if (array.length) {
           showOrder(array);
         } else {
           emptyOrder();
         }
       });
+    }
   });
 };
 
